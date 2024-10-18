@@ -3,6 +3,7 @@
 
 #include "CLI/CLI.hpp"
 #include "config.h"
+#include <vector> // 
 
 auto main(int argc, char **argv) -> int
 {
@@ -31,12 +32,23 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, {}!\n", app.get_name());
     fmt::print("Value of argc, {}!\n", argc);
-    fmt::print("Value of argv[0], {}!\n", argv);
+    //fmt::print("Value of argv[0], {}!\n", argv);
    // fmt::print("Value of argv[2], {}!\n", argv); // /*possible nullpointer exception*/
     fmt::print("The value of counter {}!\n", counter);
     /* INSERT YOUR CODE HERE */
 
-    return 42; /* exit gracefully*/
+
+    std::vector<unsigned int> values;
+    fmt::print("Elements in values, {}!\n",values.size()); //shows the number of elements in container(vektor)
+    values.push_back(42);
+    values.push_back(4711);
+    values.push_back(11);
+    fmt::print("Elements in values, {}!\n",values.size());
+    for(int i =0; i < values.size(); i++){
+        fmt::print("Value of element {} in values:{}!\n", i,values[i]);
+
+    }
+    return 0; /* exit gracefully*/
 }
 
 
