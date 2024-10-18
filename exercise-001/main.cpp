@@ -32,9 +32,30 @@ auto main(int argc, char **argv) -> int
     fmt::print("Hello, {}!\n", app.get_name());
     fmt::print("Value of argc, {}!\n", argc);
     fmt::print("Value of argv[0], {}!\n", argv);
-    fmt::print("Value of argv[2], {}!\n", argv);
+   // fmt::print("Value of argv[2], {}!\n", argv); // /*possible nullpointer exception*/
     fmt::print("The value of counter {}!\n", counter);
     /* INSERT YOUR CODE HERE */
 
     return 42; /* exit gracefully*/
 }
+
+
+
+
+
+
+
+
+
+
+
+/*	1.	fmt::print("Hello, {}!\n", app.get_name());:
+	•	Gibt den Namen der App aus, {} wird durch den App-Namen ersetzt.
+	2.	fmt::print("Value of argc, {}!\n", argc);:
+	•	Gibt die Anzahl der Kommandozeilenargumente aus.
+	3.	fmt::print("Value of argv[0], {}!\n", argv);:
+	•	Zeigt den Namen des Programms an.
+	4.	fmt::print("Value of argv[2], {}!\n", argv);:
+	•	Versucht, das dritte Argument(wie viele zusammengeschriebene ketten ohne leerzeichen) auszugeben, aber vorsichtig, falls es nicht vorhanden ist.
+	5.	fmt::print("The value of counter {}!\n", counter);:
+	•	Gibt den Wert von counter aus (Standard 20, kann durch -c geändert werden).*/
