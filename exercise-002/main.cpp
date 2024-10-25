@@ -8,8 +8,12 @@
 #include "CLI/CLI.hpp"
 #include "config.h"
 
+//globale variable
+int foo;
+int bar = 20;
 auto main(int argc, char** argv) -> int
 {
+
     /**
      * CLI11 is a command line parser to add command line options
      * More info at https://github.com/CLIUtils/CLI11#usage
@@ -30,5 +34,8 @@ auto main(int argc, char** argv) -> int
 
     
     fmt::println("Hello exercise 2");
+    fmt::println("The value of foo:{}and the adresses{}",foo,fmt::ptr(&foo));
+    fmt::println("The value of foo:{}and the adresses{}",bar,fmt::ptr(&bar));
     return 0; /* exit gracefully*/
 }
+/*deiod*/
